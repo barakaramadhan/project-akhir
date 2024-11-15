@@ -1,20 +1,37 @@
 @import url("https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
-
-/* *{
+/* 
+*{
   margin: 0;
   padding: 0;
+  background-color: red;
 } */
+html {
+  scroll-behavior: smooth;
+}
 #navigasi {
   background-color: #257180;
   padding-bottom: 300px;
 }
+#navigasi-container {
+  background-color: #257180;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  /* From https://css.glass */
+  background: rgba(37, 113, 128, 0.6);
+  border-radius: 10px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
+  border: 1px solid rgba(37, 113, 128, 0.27);
+}
 .container-navigasi {
   /* background-color: blueviolet; */
-  margin-left: 50px;
-  margin-right: 50px;
+  margin-left: 100px;
+  margin-right: 100px;
   align-items: center;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  /* padding-top: 15px;
+  padding-bottom: 15px; */
   display: flex;
   justify-content: space-between;
 }
@@ -36,6 +53,7 @@
   /* background-color: aquamarine; */
   display: flex;
   list-style: none;
+
   /* justify-content: space-between; */
 }
 
@@ -47,10 +65,16 @@
   font-size: 20px;
   color: white;
   font-weight: 400;
-
   width: 200px;
 }
-.list-nav li:hover {
+.list-nav a {
+  text-decoration: none;
+  font-family: "Cabin", sans-serif;
+  font-size: 20px;
+  color: white;
+  font-weight: 400;
+}
+.list-nav li a:hover {
   /* text-decoration: underline; */
   font-weight: bold;
 }
@@ -98,16 +122,114 @@
   box-shadow: 0 4px 15px 0 rgba(49, 196, 190, 0.75);
 }
 
-
-
-
 /* banner */
+
+/* BUTTON NAVIGASI ATAS */
+@import url("https://fonts.googleapis.com/css?family=Poppins:900i");
+
+* {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  /* background-color: #2bb673; */
+  display: flex;
+  /* justify-content: flex-start; */
+  /* align-items: center; */
+  margin-left: 0;
+}
+
+.cta {
+  display: flex;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  align-items: center;
+  color: white;
+  background: #102c57;
+  transition: 1s;
+  box-shadow: 6px 6px 0 #1a4b55;
+  transform: skewX(-15deg);
+  margin-top: 30px;
+}
+
+.cta:focus {
+  outline: none;
+}
+
+.cta:hover {
+  transition: 0.5s;
+  box-shadow: 10px 10px 0 #fbc638;
+}
+
+.cta span:nth-child(2) {
+  transition: 0.5s;
+  margin-right: 0px;
+}
+
+.cta:hover span:nth-child(2) {
+  transition: 0.5s;
+  margin-right: 45px;
+}
+
+span {
+  transform: skewX(15deg);
+}
+
+span:nth-child(2) {
+  width: 20px;
+  margin-left: 30px;
+  position: relative;
+  top: 12%;
+}
+
+/**************SVG****************/
+
+path.one {
+  transition: 0.4s;
+  transform: translateX(-60%);
+}
+
+path.two {
+  transition: 0.5s;
+  transform: translateX(-30%);
+}
+
+.cta:hover path.three {
+  animation: color_anim 1s infinite 0.2s;
+}
+
+.cta:hover path.one {
+  transform: translateX(0%);
+  animation: color_anim 1s infinite 0.6s;
+}
+
+.cta:hover path.two {
+  transform: translateX(0%);
+  animation: color_anim 1s infinite 0.4s;
+}
+
+/* SVG animations */
+
+@keyframes color_anim {
+  0% {
+    fill: white;
+  }
+  50% {
+    fill: #fbc638;
+  }
+  100% {
+    fill: white;
+  }
+}
+
 .banner {
   display: flex;
   justify-content: space-between;
-  margin-left: 50px;
-  margin-right: 50px;
-  margin-top: 100px;
+  margin-left: 100px;
+  margin-right: 100px;
+  /* margin-top: 100px; */
 }
 
 .Inovasi {
@@ -117,6 +239,7 @@
   font-size: 50px;
 }
 .berwarna {
+  display: inline;
   font-size: 50px;
   font-family: "Cabin", sans-serif;
   font-weight: 700;
@@ -153,15 +276,583 @@
   font-size: 20px;
 }
 
+/* MENEJEMEN PONDOK */
+.container-menejemen {
+  /* background-color: #2bb673; */
+  display: flex;
+  justify-content: center;
+  margin-bottom: 250px;
+  flex-direction: column;
+  align-items: center;
+}
+.asest-menejemen {
+  padding-top: 20px;
+  padding-bottom: 50px;
+  background-color: white;
+  width: 980px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 50px;
+  margin-top: -400px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+.asest-menejemen h1 {
+  text-align: center;
+  color: black;
+  font-family: "Cabin", sans-serif;
+  font-size: 35px;
+}
+#test {
+  overflow: hidden;
+}
+.conten img {
+  width: 100%;
+}
+.conten {
+  padding-top: 20px;
 
-.button-navigasi {
+  /* background-color: #30dd8a; */
+  display: flex;
+  /* margin-bottom: 20px; */
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 600px;
+}
+.conten .img {
+  /* background-color: #f95454; */
+  width: 100px;
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.berwarna-2 {
+  color: #f95454;
+}
+.button-banner {
   width: 200px;
   font-size: 18px;
   font-weight: 600;
   color: #fff;
   cursor: pointer;
-  /* margin: 20px; */
+  margin: 20px;
+  height: 55px;
+  text-align: center;
+  border: none;
+  background-size: 300% 100%;
+  font-family: "Cabin", sans-serif;
+  margin-top: 100px;
+  margin-bottom: -30px;
+
+  border-radius: 50px;
+  moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.button-banner:hover {
+  background-position: 100% 0;
+  moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.button-banner:focus {
+  outline: none;
+}
+
+.button-banner.color-3 {
+  background-image: linear-gradient(
+    to right,
+    #25aae1,
+    #40e495,
+    #30dd8a,
+    #2bb673
+  );
+  box-shadow: 0 4px 15px 0 rgba(49, 196, 190, 0.75);
+}
+
+/* PELAYANAN PONDOK */
+
+#layanan-pondok {
+  background-color: #257180;
+  margin-top: -300px;
+}
+
+.container-3 {
+  padding-top: 150px;
+}
+.banner-2 {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-top: 100px;
+  margin-bottom: 20px;
+}
+
+.Inovasi-2 {
+  color: white;
+  font-family: "Cabin", sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  width: 500px;
+  padding-bottom: 30px;
+}
+.txt-3 p {
+  color: white;
+  font-family: "Cabin", sans-serif;
+  font-size: 20px;
+  width: 500px;
+}
+.adz {
+  font-size: 40px;
+  font-family: "Cabin", sans-serif;
+  font-weight: 700;
+  color: #f95454;
+}
+.adz {
+  box-shadow: inset 0 0 0 0 #54b3d6;
+  color: #54b3d6;
+  padding: 0 0.25rem;
+  margin: 0 -0.25rem;
+  transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.adz:hover {
+  color: #fff;
+  box-shadow: inset 200px 0 0 0 #54b3d6;
+}
+
+/* Presentational styles */
+.adz {
+  color: #f95454;
+  font-family: "Cabin", sans-serif;
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 1.5;
+  text-decoration: none;
+}
+
+.image-banner {
+  margin-top: 150px;
+  margin-bottom: 200px;
+}
+
+/* masalah */
+.judul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.judul h1 {
+  color: white;
+  font-family: "Cabin", sans-serif;
+  font-size: 40px;
+  text-align: center;
+  font-weight: 700;
+}
+.beres {
+  color: white;
+  padding-bottom: 100px;
+  font-size: 20px;
+  font-family: "Cabin", sans-serif;
+}
+.masalah {
+  color: #f95454;
+}
+.bagian-image {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 900;
+}
+.sulit-menginput img,
+.sulit-mengelola img,
+.sulit-pembukuan img,
+.sulit-ribet img,
+.sulit-uang-saku img,
+.sulit-pusing img {
+  width: 100%;
+}
+.sulit-menginput,
+.sulit-mengelola,
+.sulit-pembukuan,
+.sulit-ribet,
+.sulit-uang-saku,
+.sulit-pusing {
+  width: 400px;
+  margin-left: 10px;
+  position: relative;
   margin-top: 20px;
+  margin-right: 20px;
+  /* border-radius: 50px; */
+}
+.deskripsi {
+  /* background-color: #102C57; */
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  z-index: 9;
+  top: 70px;
+  width: 100%;
+  /* left: 50%; */
+}
+.deskripsi h2 {
+  color: white;
+  font-size: 20px;
+  font-family: "Cabin", sans-serif;
+  text-align: center;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  margin-top: 30px;
+}
+.deskripsi img {
+  /* background-color: yellow; */
+  width: 90px;
+  padding-bottom: 10px;
+}
+
+/* kendala */
+#kendala {
+  padding-top: 200px;
+}
+.kendala-adzsys {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.kendala-adzsys h1 {
+  color: white;
+  font-family: "Cabin", sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  text-align: center;
+}
+.kendala-adzsys p {
+  color: white;
+  font-size: 20px;
+  font-family: "Cabin", sans-serif;
+  text-align: center;
+  width: 700px;
+  padding-bottom: 50px;
+}
+.button-kendala {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  margin: 20px;
+  height: 55px;
+  text-align: center;
+  border: none;
+  background-size: 300% 100%;
+  font-family: "Cabin", sans-serif;
+  border-radius: 50px;
+  moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  margin-bottom: 200px;
+}
+
+.button-kendala:hover {
+  background-position: 100% 0;
+  moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.button-kendala:focus {
+  outline: none;
+}
+
+.button-kendala.color-4 {
+  background-image: linear-gradient(
+    to right,
+    #25aae1,
+    #40e495,
+    #30dd8a,
+    #2bb673
+  );
+  box-shadow: 0 4px 15px 0 rgba(49, 196, 190, 0.75);
+}
+
+.wa {
+  /* background-color: #f95454; */
+  width: 30px;
+}
+.wa img {
+  width: 100%;
+  padding-left: 10px;
+}
+
+/* KEUNGGULAN FITUR */
+#keunggulan {
+  margin-top: -600px;
+}
+.container-semua {
+  display: flex;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+.gambar {
+  margin-top: -210px;
+}
+.container-keunggulan {
+  width: 600px;
+  margin-top: -300px;
+  /* margin-bottom: -200px; */
+  margin-left: 100px;
+  margin-right: 100px;
+}
+.keunggulan-fitur {
+  /* padding-top: 20px; */
+  background-color: white;
+  border-radius: 20px;
+  margin-top: -50px;
+  padding-top: 50px;
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.awalan-keunggulan {
+  border-radius: 15px;
+  /* padding-left: 60px; */
+  width: 250px;
+  background-color: white;
+  margin-left: 50px;
+  z-index: 9;
+  position: relative;
+}
+.awalan-keunggulan p {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #25aae1;
+  font-size: 20px;
+  font-family: "Cabin", sans-serif;
+  font-weight: 700;
+  text-align: center;
+}
+.isi-keunggulan {
+  background-color: white;
+  border-radius: 20px;
+}
+.keunggulan-1 img {
+  width: 40px;
+}
+.keunggulan-1 {
+  margin-left: 20px;
+  margin-right: 20px;
+  align-items: center;
+}
+
+.lorem {
+  display: flex;
+  align-items: center;
+}
+.lorem p {
+  padding-left: 20px;
+}
+hr {
+  margin-left: 60px;
+  margin-right: 60px;
+}
+
+/* TESTIMONIAL */
+#testimonial {
+  margin-top: 600px;
+  background-color: #257180;
+}
+.container-testimonial {
+  background-color: #257180;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container-header {
+  background-color: #257180;
+  width: 300px;
+  border-radius: 15px;
+  margin-top: -30px;
+  position: relative;
+  z-index: 9;
+}
+
+.kata-mereka {
+  /* background-color: #54b3d6; */
+  margin-top: 50px;
+  color: white;
+  font-family: "Cabin", sans-serif;
+  font-size: 35px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 100px;
+}
+.testi {
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  font-family: "Cabin", sans-serif;
+  font-weight: 700;
+}
+.pembungkus-container {
+  display: flex;
+}
+.container-card {
+  background-color: #1a4b55;
+  border-radius: 20px;
+  width: 300px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.garis {
+  width: 100%;
+  padding-top: 10px;
+}
+.container-card h2 {
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+  font-family: "Cabin", sans-serif;
+  padding-bottom: 30px;
+  text-align: center;
+  padding-top: 20px;
+}
+.container-card p {
+  color: white;
+  padding-left: 30px;
+  padding-right: 30px;
+  text-align: center;
+  padding-bottom: 20px;
+}
+.container-img {
+  margin-top: -70px;
+}
+
+/* ARTIKEL */
+.artikel-header {
+  /* background-color: red; */
+  text-align: center;
+  margin-top: 200px;
+  margin-bottom: 100px;
+}
+.artikel-header h1 {
+  color: white;
+  font-size: 35px;
+  font-weight: 700;
+  font-family: "Cabin", sans-serif;
+}
+.artikel-header p {
+  color: white;
+  font-size: 20px;
+  font-weight: 400;
+  font-family: "Cabin", sans-serif;
+  margin-left: 400px;
+  margin-right: 400px;
+}
+.container-artikel img {
+  width: 100%;
+}
+.isi-artikel {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.pembungkus-artikel {
+  width: 350px;
+  border-radius: 10px;
+  margin: 50px;
+  padding-top: 50px;
+}
+.text-artikel {
+  background-color: white;
+  border-radius: 0px 0px 15px 15px;
+  width: 100%;
+  margin-top: -5px;
+  padding: 0;
+  margin-left: 2px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+.text-artikel p,
+.text-artikel h2 {
+  margin: 0;
+}
+.img-pondok img {
+  /* background-color: red; */
+}
+.text-artikel h2 {
+  font-size: 24px;
+  font-weight: 700;
+  font-family: "Cabin", sans-serif;
+  padding-top: 20px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+}
+.isi {
+  color: #707070;
+  font-size: 18px;
+  font-family: "Cabin", sans-serif;
+  font-weight: 400;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 20px;
+}
+.text-artikel a {
+  color: #5193e7;
+  font-size: 18px;
+  font-family: "Cabin", sans-serif;
+  font-weight: 800;
+  padding-left: 10px;
+  text-decoration: none;
+}
+.text-artikel {
+  padding-bottom: 20px;
+}
+
+/* APLIKSI ADZSYS */
+#aplikasi {
+  margin-top: 300px;
+}
+.aplikasi-merah {
+  display: inline;
+  font-size: 35px;
+  font-family: "Cabin", sans-serif;
+  font-weight: 700;
+  color: #f95454;
+}
+.header-aplikasi h1 {
+  color: white;
+  font-family: "Cabin", sans-serif;
+  font-size: 35px;
+  font-weight: 700;
+  text-align: center;
+}
+.bagian-buttom {
+  display: flex;
+  justify-content: center;
+  margin-top: 90px;
+}
+.button-footer {
+  width: 200px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  margin: 20px;
   height: 55px;
   text-align: center;
   border: none;
@@ -175,7 +866,7 @@
   transition: all 0.4s ease-in-out;
 }
 
-.button-navigasi:hover {
+.button-footer:hover {
   background-position: 100% 0;
   moz-transition: all 0.4s ease-in-out;
   -o-transition: all 0.4s ease-in-out;
@@ -183,11 +874,11 @@
   transition: all 0.4s ease-in-out;
 }
 
-.button-navigasi:focus {
+.button-footer:focus {
   outline: none;
 }
 
-.button-navigasi.color-1 {
+.button-footer.color-9 {
   background-image: linear-gradient(
     to right,
     #25aae1,
@@ -198,69 +889,336 @@
   box-shadow: 0 4px 15px 0 rgba(49, 196, 190, 0.75);
 }
 
-
-
-/* MENEJEMEN PONDOK */
-#menejemen{
-  background-color: #7FA1C3;
-  
-
-  
-}
-.container-menejemen{
-  /* background-color: #2bb673; */
+.button-aplikasi {
   display: flex;
   justify-content: center;
-  
-
- 
- 
-}
-.asest-menejemen{
-  padding-top: 20px;
-  padding-bottom: 50px;
-  background-color: #4D869C;
-  width: 980px;
-  display: flex;
-  flex-direction: column;
   align-items: center;
-  border-radius: 30px;
-  margin-top: -150px;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
-  
-  
-  
-}
-.asest-menejemen h1{
+  width: 200px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  margin: 20px;
+  height: 55px;
   text-align: center;
+  border: none;
+  background-size: 300% 100%;
+  font-family: "Cabin", sans-serif;
+  border-radius: 50px;
+  moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.button-aplikasi:hover {
+  background-position: 100% 0;
+  moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.button-aplikasi:focus {
+  outline: none;
+}
+
+.button-aplikasi.color-10 {
+  background-image: linear-gradient(
+    to right,
+    #25aae1,
+    #40e495,
+    #30dd8a,
+    #2bb673
+  );
+  box-shadow: 0 4px 15px 0 rgba(49, 196, 190, 0.75);
+}
+
+/* TENTANG-KAMI */
+.header-tentang-kami {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("./asest/IMG-20240817-WA0004.jpg");
+  background-size: cover;
+  height: 800px;
+  margin-top: -300px;
+  padding-top: 400px;
+  background-position: center;
+}
+.header-tentang-kami h1 {
   color: white;
   font-family: "Cabin", sans-serif;
   font-size: 35px;
- 
+  font-weight: 700;
+  text-align: center;
+}
+.header-tentang-kami img {
+  width: 100%;
+  margin-top: -250px;
+  position: relative;
+  z-index: -2;
+}
 
+/* SIAPA-KAMI */
+#siapa-kami {
+  background-color: #257180;
+  margin-top: -100px;
 }
-#test{
-  overflow: hidden;
-}
-.conten img{
- width: 100%;
-}
-.conten{
-  padding-top: 20px;
-
-  /* background-color: #30dd8a; */
+.container-siapa-kami {
+  margin-left: 100px;
+  margin-right: 100px;
   display: flex;
-  /* margin-bottom: 20px; */
-  flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-around;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.text-siapa-kami {
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.09);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding-right: 20px;
+  padding-left: 20px;
+}
+.text-siapa-kami h1 {
+  color: white;
+  font-size: 50px;
+  font-family: "Cabin", sans-serif;
+  font-weight: 700;
+}
+.text-siapa-kami p {
+  color: white;
+  font-size: 25px;
+  font-family: "Cabin", sans-serif;
+  font-weight: 400px;
   width: 600px;
 }
-.conten .img{
-  /* background-color: #f95454; */
-  width: 100px;
-  padding-left: 20px;
-  margin-bottom: 20px;
- 
+.kami-merah {
+  display: inline;
+  font-size: 50px;
+  font-family: "Cabin", sans-serif;
+  font-weight: 700;
+  color: #f95454;
+}
+.text-siapa-kami span {
+  display: inline;
+  font-size: 35px;
+  font-weight: 400;
+  font-family: "Cabin", sans-serif;
+  color: #f95454;
+}
+.image-siapa-kami {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.img-1 {
+  width: 200px;
+  padding-top: 20px;
+}
+.img-1 img {
+  width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
+    rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
+    rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+  border-radius: 20px;
 }
 
+/* TERPERCAYA */
+#terpercaya {
+  margin-top: 200px;
+  background-color: #1a4b55;
+}
+.container-terpercaya {
+  margin-left: 50px;
+  margin-right: 50px;
+}
+.terpercaya-1 {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.text-terpercaya {
+  color: white;
+  font-size: 28px;
+  direction: rtl;
+  font-family: "Cabin", sans-serif;
+  font-weight: 600;
+  width: 710px;
+}
+.bagian-logo h3 {
+  /* background-color: #f95454; */
+  color: white;
+  font-size: 28px;
+  font-family: "Cabin", sans-serif;
+  font-weight: 600;
+  width: 200px;
+}
+.bagian-logo {
+  width: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.bagian-logo img {
+  width: 100%;
+  margin-top: -20px;
+}
 
+/* BAGIAN-MISI */
+#misi-kami {
+  margin-top: 50px;
+  background-color: #1a4b55;
+}
+.container-misi {
+  margin-left: 50px;
+  margin-right: 50px;
+}
+.misi-1 {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.text-terpercaya {
+  color: white;
+  font-size: 28px;
+  direction: rtl;
+  font-family: "Cabin", sans-serif;
+  font-weight: 600;
+  width: 710px;
+}
+.bagian-logo h3 {
+  /* background-color: #f95454; */
+  color: white;
+  font-size: 28px;
+  font-family: "Cabin", sans-serif;
+  font-weight: 600;
+  width: 200px;
+}
+.bagian-logo {
+  width: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.bagian-logo img {
+  width: 100%;
+  margin-top: -20px;
+}
+
+/* KENAPA PILIH KAMI */
+.text-kenapa-pilih-kami h1 {
+  text-align: center;
+  margin-top: 300px;
+  color: white;
+  font-size: 50px;
+  font-family: "Cabin", sans-serif;
+  font-weight: 700;
+}
+.text-kenapa-pilih-kami p {
+  margin-top: -35px;
+  color: white;
+  font-size: 25px;
+  font-family: "Cabin", sans-serif;
+  font-weight: 600;
+  text-align: center;
+}
+.bagian-img-kenapa img {
+  width: 100%;
+}
+.bagian-img-kenapa {
+  width: 50px;
+  padding-top: 50px;
+}
+.isi-kenapa {
+  display: flex;
+  margin-top: 100px;
+}
+.kenapa-1 {
+  margin-left: 50px;
+  margin-right: 50px;
+  background-color: #1a4b55;
+  width: 400px;
+  padding-left: 30px;
+  padding-right: 30px;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
+    rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
+    rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}
+.isi-kenapa :hover{
+  background-color: #fbc638;
+  border-radius: 5px;
+}
+.kenapa-1 p {
+  color: white;
+  font-size: 20px;
+  font-family: "Cabin", sans-serif;
+  padding-bottom: 50px;
+}
+
+/* product */
+.isi-product{
+  margin-left: 50px;
+  margin-right: 50px;
+}
+.img-product img{
+  width: 100%;
+}
+.img-product{
+  width: 40px;
+}
+.isi-product{
+  margin
+}
+#product-kami{
+  margin-top: 250px;
+}
+.product-1{
+  display: flex;
+  align-items: center;
+}
+.text-product{
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.text-product h3{
+  color: white;
+  font-size: 25px;
+  font-family: "Cabin", sans-serif;
+  font-weight: 700;
+}
+.text-product p{
+  margin-top: -30px;
+  color: white;
+  font-size: 20px;
+  font-family: "Cabin", sans-serif;
+}
+.text-product h1{
+  margin-left: 50px;
+  margin-right: 50px;
+  text-align: center;
+
+}
+.aplikasi{
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-bottom: 100px;
+  text-align: center;
+
+}
+.text-product h1{
+  color: white;
+  font-size: 50px;
+  font-family: "Cabin", sans-serif;
+  font-weight: 700;
+
+}
