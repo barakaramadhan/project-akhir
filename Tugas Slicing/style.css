@@ -1,0 +1,81 @@
+@font-face {
+  font-family: "Galber";
+  src: url("./Galber-Regular-BF656d3c9fe710c.otf");
+}
+@font-face {
+  font-family: "satoshi";
+  src: url("./Satoshi-Light.otf");
+}
+
+
+.container-banner {
+  display: flex;
+  justify-content: space-around;
+}
+.text-header {
+  margin-top: 150px;
+}
+.text-header h1 {
+    font-family: 'Galber',sans-serif;
+  color: #34221f;
+  font-size: 90px;
+  /* font-family: "Roboto Condensed", serif; */
+  font-weight: 400;
+}
+.text-header p {
+  margin-top: -50px;
+  color: #545454;
+  font-size: 26px;
+  font-family: 'satoshi',sans-serif;
+  font-weight: 200f;
+}
+.btn-hover.color-4 {
+  margin-left: -1px;
+}
+
+.img {
+  width: 500px;
+}
+.img img {
+  width: 100%;
+}
+.btn-hover {
+  width: 200px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  margin: 20px;
+  height: 55px;
+  text-align: center;
+  border: none;
+  background-size: 300% 100%;
+
+  border-radius: 13px;
+  moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.btn-hover:hover {
+  background-position: 100% 0;
+  moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.btn-hover:focus {
+  outline: none;
+}
+.btn-hover.color-4 {
+  background-image: linear-gradient(
+    to right,
+    #fc6076,
+    #ff9a44,
+    #ef9d43,
+    #e75516
+  );
+  box-shadow: 0 4px 15px 0 rgba(252, 104, 110, 0.75);
+}
